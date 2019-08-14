@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'vibra',
   packages = ['vibra'],
-  version = '1',
+  version = 'v1.0',
   license='MIT',
   description = 'An add-on to Tensorflow',
   author = 'VERSUS',
-  author_email = '',
-  url = '', #######
-  download_url = '', ######
+  author_email = 'vursustechnology@gmail.com',
+  url = 'https://github.com/PerceptronV/vibra', #######
+  download_url = 'https://github.com/PerceptronV/vibra/archive/v1.0.tar.gz', ######
   keywords = ['Tensorflow', 'add-on'],
   install_requires=[
       'numpy',
