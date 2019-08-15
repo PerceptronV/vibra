@@ -12,10 +12,6 @@ setup(
   keywords = ['Tensorflow', 'add-on'],
   install_requires=[
       'numpy',
-    'os',
-    'tensorflow',
-    'time',
-    'random',
   ],
   classifiers=[  # Optional
     # How mature is this project? Common values are
