@@ -8,18 +8,29 @@ import random
 
 class dataset(object):
     def __init__(self,train_data=None,train_labels=None,test_data=None,test_labels=None):
-        self.train_data=np.asarray(train_data)
-        self.train_labels=np.asarray(train_labels)
-        self.test_data=np.asarray(test_data)
-        self.test_labels=np.asarray(test_labels)
+        if train_data is not None:
+            self.train_data=np.asarray(train_data)
+            self.train_size = self.train_data.shape[0]
+            self.train_seed_hist = [0 for i in range(self.train_size)]
+        else:
+            self.train_data = None
+        if train_labels is not None:
+            self.train_labels=np.asarray(train_labels)
+        else:
+            self.train_labels = None
+        if test_data is not None:
+            self.test_data=np.asarray(test_data)
+            self.test_size = self.test_data.shape[0]
+            self.test_seed_hist = [0 for i2 in range(self.test_size)]
+        else:
+            self.test_data = None
+        if test_labels is not None:
+            self.test_labels=np.asarray(test_labels)
+        else:
+            self.test_labels = None
         self.train_call=-1
         self.test_call=-1
-        if train_data is not None:
-            self.train_size = self.train_data.shape[0]
-            self.train_seed_hist=[0 for i in range(self.train_size)]
-        if test_data is not None:
-            self.test_size=self.test_data.shape[0]
-            self.test_seed_hist=[0 for i2 in range(self.test_size)]
+
 
     def take(self,idx,type='train'):
         if type is 'train':

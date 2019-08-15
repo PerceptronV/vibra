@@ -1,42 +1,45 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import numpy as np
-import os
-import time
-import tensorflow as tf
 from tensorflow import keras
 
+
 class file(object):
-    def __init__ (self,filename,src,encoding='utf-8'):
+    def __init__ (self,src,filename='',encoding='utf-8'):
         self.src=src
-        self.filename=filename
-        self.chars=None
-        self.encoding = encoding
+        if filename is '':
+            self.filename=self.src[:3]
+        else:
+            self.filename=filename
+        self.encing = encoding
         self.file = keras.utils.get_file(self.filename, self.src)
-        self.text = open(self.file, 'rb').read().decode(encoding=self.encoding)
-        self.chars = sorted(set(self.text))
-        self.char2idx={u:i for i, u in enumerate(self.chars)}
-        self.idx2char=np.array(self.chars)
-        self.text_as_int = np.array([self.char2idx[c] for c in self.text])
-        self.len=len(self.text)
-        self.char_size=len(self.chars)
+        self.txt = open(self.file, 'rb').read().decode(encoding=self.encing)
+        self.chrs = sorted(set(self.txt))
+        self.chr2idx={u:i for i, u in enumerate(self.chrs)}
+        self.idx2chr=np.array(self.chrs)
+        self.txt_as_int = np.array([self.chr2idx[c] for c in self.txt])
+        self.length=len(self.txt)
+        self.chr_size=len(self.chrs)
 
     def text(self):
-        return (self.text)
+        return (self.txt)
 
     def chars(self):
-        return (self.chars)
+        return (self.chrs)
 
     def char2idx(self):
-        return (self.char2idx)
+        return (self.chr2idx)
 
     def idx2char(self):
-        return (self.idx2char)
+        return (self.idx2chr)
 
     def text_as_int(self):
-        return (self.text_as_int)
+        return (self.txt_as_int)
 
     def len(self):
-        return (self.len)
+        return (self.length)
 
     def char_size(self):
-        return (self.char_size)
+        return (self.chr_size)
+
+    def encoding(self):
+        return (self.encing)

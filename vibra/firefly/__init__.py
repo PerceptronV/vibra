@@ -1,4 +1,3 @@
-from vibra.firefly import built_in
+from vibra.firefly.built_in import built_in
+from vibra.firefly.file import file
 from vibra.firefly import data
-from vibra.firefly.data import dataset
-from vibra.firefly import file
