@@ -8,7 +8,7 @@ setup(
   author = 'PerceptronV',
   author_email = 'perceptronv@gmail.com',
   url = 'https://github.com/PerceptronV/vibra', #######
-  download_url = 'https://github.com/PerceptronV/vibra/archive/v1.7.tar.gz', ######
+  download_url = 'https://github.com/PerceptronV/vibra/archive/v1.7.1.tar.gz', ######
   keywords = ['Tensorflow', 'add-on'],
   install_requires=[
       'numpy',
