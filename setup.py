@@ -1,8 +1,8 @@
-from distutils.core import setup
+from distutils.core import setup, find_packages
 setup(
   name = 'vibra',
-  packages = ['vibra'],
-  version = 'v1.7',#####
+  packages = find_packages(),
+  version = 'v1.7.1',#####
   license='MIT',
   description = 'A non-finished add-on to Tensorflow',
   author = 'PerceptronV',
