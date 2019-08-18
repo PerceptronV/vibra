@@ -5,7 +5,8 @@ import time
 import tensorflow as tf
 from tensorflow import keras
 
+
 class data(object):
 
-    def to_data (self,array):
-        return (np.asarray())
+    def to_data(self, array):
+        return np.asarray()
