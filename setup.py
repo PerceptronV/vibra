@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 setup(
   name = 'vibra',
   packages = find_packages(),
-  version = 'v1.7.1',#####
+  version = 'v1.8.0',#####
   license='MIT',
   description = 'A non-finished add-on to Tensorflow',
   author = 'PerceptronV',
   author_email = 'perceptronv@gmail.com',
   url = 'https://github.com/PerceptronV/vibra', #######
-  download_url = 'https://github.com/PerceptronV/vibra/archive/v1.7.1.tar.gz', ######
+  download_url = 'https://github.com/PerceptronV/vibra/archive/v1.8.0.tar.gz', ######
   keywords = ['Tensorflow', 'add-on'],
   install_requires=[
       'numpy',
